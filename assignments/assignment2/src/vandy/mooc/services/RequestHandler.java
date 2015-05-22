@@ -95,6 +95,7 @@ class RequestHandler extends Handler {
         // Execute the downloadImageAndReply Runnable to download the
         // image and reply.
         // TODO -- you fill in here.
+        downloadImageAndReply.run();
     }
 
     /**
@@ -108,7 +109,7 @@ class RequestHandler extends Handler {
         // Call the makeReplyMessage() factory method to create
         // Message.
         // TODO -- you fill in here.
-
+    	ReplyMessage replyMessage = ReplyMessage.makeReplyMessage(pathToImageFile, url, requestCode);
         try {
             Log.d(TAG,
                   "sending "
@@ -117,6 +118,7 @@ class RequestHandler extends Handler {
 
             // Send the replyMessage back to the Activity.
             // TODO -- you fill in here.
+            
         } catch (Exception e) {
             Log.e(getClass().getName(),
                   "Exception while sending reply message back to Activity.",
@@ -129,7 +131,8 @@ class RequestHandler extends Handler {
      */
     public void shutdown() {
         // Immediately shutdown the ExecutorService.
-        // TODO -- you fill in here.        
+        // TODO -- you fill in here.  
+    	mExecutorService.shutdown();
     }
 }
 

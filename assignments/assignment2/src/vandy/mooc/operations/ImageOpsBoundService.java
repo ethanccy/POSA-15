@@ -65,6 +65,7 @@ public class ImageOpsBoundService extends ImageOpsImpl {
                 // null, thereby preventing send() calls until it's
                 // reconnected.
                 // TODO -- you fill in here.
+                mRequestMessengerRef = null;
             }
 	};
 
@@ -114,7 +115,7 @@ public class ImageOpsBoundService extends ImageOpsImpl {
     }
 
     /**
-     * Start a download.  Plays the fole of the "Primitive Operation"
+     * Start a download.  Plays the role of the "Primitive Operation"
      * (a.k.a., "Hook Method") in the Template Method pattern.
      */
     @Override
