@@ -55,7 +55,7 @@ public class RequestMessage extends RequestReplyMessageBase {
         // TODO -- you fill in here.
         bundle.putString(IMAGE_URL, url.toString());
 
-        // Put the pathname to the image file into the Bundle
+        // Put the pathname to the directory into the Bundle
         // TODO -- you fill in here.
         bundle.putString(DIRECTORY_PATHNAME, directoryPathname);
 
