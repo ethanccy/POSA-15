@@ -142,7 +142,7 @@ public class MainActivity extends LifecycleLoggingActivity
     }
 
     /**
-     * Called by the Android Activity framework when the user preses
+     * Called by the Android Activity framework when the user presses
      * the "Download and Display Image(s)" button in the UI.
      *
      * @param view The view.
