@@ -125,8 +125,7 @@ class RequestHandler extends Handler {
     
             // Send the replyMessage back to the Activity.
             // TODO -- you fill in here.
-            messenger.send(replyMessage.getMessage());
-            
+        	messenger.send(replyMessage.getMessage());           
         } catch (Exception e) {
             Log.e(getClass().getName(),
                   "Exception while sending reply message back to Activity.",
@@ -139,8 +138,10 @@ class RequestHandler extends Handler {
      */
     public void shutdown() {
         // Immediately shutdown the ExecutorService.
-        // TODO -- you fill in here.  
-    	mExecutorService.shutdown();
+        // TODO -- you fill in here.
+    	if (!mExecutorService.isShutdown()) {
+    		mExecutorService.shutdownNow();
+    	}
     }
 }
 

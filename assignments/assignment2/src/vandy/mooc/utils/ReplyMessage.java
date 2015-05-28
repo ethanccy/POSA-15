@@ -48,11 +48,11 @@ public class ReplyMessage extends RequestReplyMessageBase {
 
         // Put the URL to the image file into the Bundle
         // TODO -- you fill in here.
-        bundle.putString(IMAGE_URL, url.toString());
+        replyMessage.setImageURL(url);
 
         // Put the requestCode into the Bundle
         // TODO -- you fill in here.
-        bundle.putInt(REQUEST_CODE, requestCode);
+        replyMessage.setRequestCode(requestCode);
 
         // Set the result code to indicate whether the download
         // succeeded or failed.
@@ -61,7 +61,7 @@ public class ReplyMessage extends RequestReplyMessageBase {
         	replyMessage.setResultCode(Activity.RESULT_CANCELED);
         } else {
         	replyMessage.setResultCode(Activity.RESULT_OK);
-        	bundle.putString(DIRECTORY_PATHNAME, pathToImageFile.toString());
+        	replyMessage.setImagePathname(pathToImageFile.toString());
         }
 
         // Put the path to the image file into the Bundle

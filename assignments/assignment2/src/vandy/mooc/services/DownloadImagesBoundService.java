@@ -33,9 +33,8 @@ public class DownloadImagesBoundService extends LifecycleLoggingService {
         // Create an intent that will download the image from the web.
     	// TODO -- you fill in here, replacing null with the proper
     	// code.
-    	Intent intent = new Intent(context, DownloadImagesBoundService.class);
-    	
-        return intent;
+    	return new Intent(context, DownloadImagesBoundService.class);
+
     }
 
     /**

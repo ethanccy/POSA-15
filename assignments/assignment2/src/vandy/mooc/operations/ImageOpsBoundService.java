@@ -91,7 +91,7 @@ public class ImageOpsBoundService extends ImageOpsImpl {
             // that can download an image from the URL given by the
             // user.  
             // TODO - you fill in here.
-        	Intent intent = new DownloadImagesBoundService().makeIntent(mActivity.get());
+        	Intent intent = DownloadImagesBoundService.makeIntent(mActivity.get());
         	
             Log.d(TAG, "calling bindService()");
 
