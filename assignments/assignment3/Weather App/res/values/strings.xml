@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Weather App</string>
+    <string name="location">type location here</string>
+    <string name="twoWaySync">Sync</string>
+    <string name="twoWayAsync">Async</string>
+
+</resources>
